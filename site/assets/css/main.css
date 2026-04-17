@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --color-primary: #475569;
-  --color-secondary: #94A3B8;
-  --color-cta: #F97316;
-  --color-cta-hover: #EA6C0A;
-  --color-bg: #F8FAFC;
-  --color-text: #1E293B;
-  --color-text-muted: #64748B;
-  --color-dark: #0F172A;
-  --color-dark-mid: #1E293B;
-  --color-steel: #334155;
+  --color-primary: #82825F;
+  --color-secondary: #8794A2;
+  --color-cta: #F81F43;
+  --color-cta-hover: #D91535;
+  --color-bg: #E1DDDF;
+  --color-text: #31322B;
+  --color-text-muted: #595E70;
+  --color-dark: #31322B;
+  --color-dark-mid: #3d3e35;
+  --color-steel: #5B553D;
+  --color-gold: #C59A58;
+  --color-olive: #66723B;
+  --color-sage: #99A587;
   --font-base: 'Plus Jakarta Sans', system-ui, sans-serif;
   --z-nav: 50;
-  --z-overlay: 30;
+  --z-overlay: 15;
   --z-content: 20;
   --z-parallax: 10;
 }
@@ -47,7 +50,7 @@ body {
   left: 1rem;
   right: 1rem;
   z-index: var(--z-nav);
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(49, 50, 43, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.08);
@@ -143,12 +146,9 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(15,23,42,0.88) 0%,
-    rgba(30,41,59,0.72) 50%,
-    rgba(15,23,42,0.82) 100%
-  );
+  background:
+    linear-gradient(to top, rgba(39,40,32,0.85) 0%, transparent 40%),
+    linear-gradient(135deg, rgba(39,40,32,0.72) 0%, rgba(49,50,43,0.42) 50%, rgba(39,40,32,0.65) 100%);
   z-index: var(--z-overlay);
 }
 
@@ -195,6 +195,7 @@ body {
   letter-spacing: -0.03em;
   color: #fff;
   margin-bottom: 1.25rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 
 .hero-title em {
@@ -204,10 +205,11 @@ body {
 
 .hero-subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.92);
   max-width: 600px;
   margin: 0 auto 2.25rem;
   line-height: 1.65;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
 
 .hero-actions {
@@ -306,7 +308,7 @@ body {
 }
 
 .chapter-mid {
-  background: #F1F5F9;
+  background: #d6d2d4;
   color: var(--color-text);
 }
 
@@ -492,7 +494,7 @@ body {
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: var(--color-cta);
+  color: var(--color-gold);
   line-height: 1;
   margin-bottom: 0.25rem;
 }
@@ -641,7 +643,7 @@ body {
 
 /* ─── CTA Band ────────────────────────────────────────────────── */
 .cta-band {
-  background: linear-gradient(135deg, var(--color-cta) 0%, #EA580C 100%);
+  background: linear-gradient(135deg, #C01030 0%, var(--color-cta) 100%);
   padding: 5rem 1.5rem;
   text-align: center;
   position: relative;
@@ -682,7 +684,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   background: #fff;
-  color: #EA580C;
+  color: #C01030;
   font-weight: 700;
   font-size: 0.9375rem;
   padding: 0.875rem 2rem;
@@ -959,7 +961,7 @@ body {
     top: calc(100% + 0.75rem);
     left: 0;
     right: 0;
-    background: rgba(15,23,42,0.97);
+    background: rgba(39,40,32,0.98);
     border-radius: 12px;
     padding: 1rem;
     border: 1px solid rgba(255,255,255,0.08);
